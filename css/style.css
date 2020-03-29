@@ -131,3 +131,42 @@ horizontal_line {
 .close-modal:active {
   color: #000;
 }
+
+/*Ниже этого кода ничего не добавлять*/
+@media (max-width: 1050px) {
+  block_line {
+    height: 7em;
+  }
+
+  .d3 {
+    background: #f9f0da;
+    position: relative;
+    top: -0.4em;
+    right: 13.3%;
+  }
+
+  .d3 form {
+    display: table-cell;
+    background: #a3d0c3;
+    flex: 0 0 250px;
+    width: 70%;
+  }
+
+  nav {
+    position: absolute;
+    top: 2.5em;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .topmenu > li {
+    display: table-cell;
+    position: relative;
+    padding: 0 30px;
+  }
+
+  .news_block {
+    margin-top: 9em;
+  }
+}
