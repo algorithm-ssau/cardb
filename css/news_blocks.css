@@ -1,0 +1,36 @@
+.news_block {
+  box-shadow: 0 0 15px;
+  height: 40em;
+  width: 28em;
+  border: none;
+  margin-top: 5em;
+  margin-left: 3%;
+  margin-right: 3%;
+  outline: none;
+  cursor: pointer;
+  word-wrap: break-word;
+  height: 520px;
+  width: 380px;
+  vertical-align: text-top;
+  outline: none;
+  cursor: pointer;
+  word-wrap: break-word;
+  font-weight: bold;
+  background: #d0d0d0;
+  text-overflow: ellipsis;
+  text-align: justify;
+  color: #262222;
+  overflow: hidden;
+  padding-bottom: 1px;
+}
+
+.news_block:hover {
+  color: #000;
+  background: #e6e6e6;
+  transition: background-color 0.3s;
+}
+
+.news_block:active {
+  background: #fff;
+  transition: background-color 0.1s;
+}
