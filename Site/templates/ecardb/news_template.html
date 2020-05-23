@@ -1,0 +1,17 @@
+{% extends 'news.html' %}
+
+{% block news %} 
+    <div class="got"></div>
+    {% for n in all_news %}
+        <button class="news_block" onclick="location.href='{% url 'ecardb:infonews' n.header%}'">
+            <div class="img"><img src = "{{n.image.url}}"></div>
+            <div class="header_style">
+            {{n.header}}
+            </div>
+            <div class="info_text">
+            {{n.subheader}}
+            </div>
+            <date>{{ n.date|date:'d.m.Y' }}</date>
+        </button>
+    {% endfor %}
+ {% endblock %}
