@@ -1,0 +1,34 @@
+{% extends 'home.html' %}
+
+{% block topsoldcars %}
+    <div class="top_box">
+        <div class="header_top">Последние добавленные автомобили</div>
+        <center>
+            {% for c in all_cars %}
+                <button class="image-top" onclick="location.href='{% url 'ecardb:cars' c.url_name%}'">
+                    <img src = "{{c.image.url}}">
+                    <div class="header_autoname_top">
+                    <p>{{c.name}}</p> 
+                    </div>
+                </button>
+            {% endfor %}
+        </center>
+        <div class="fot"></div>
+    </div>
+{% endblock %}
+
+{% block news %} 
+    <div class="got"></div>
+    {% for n in  last_news%}
+        <button class="news_block" onclick="location.href='{% url 'ecardb:infonews' n.header%}'">
+            <div class="img"><img src = "{{n.image.url}}"></div>
+            <div class="header_style">
+            {{n.header}}
+            </div>
+            <div class="info_text">
+            {{n.subheader}}
+            </div>
+            <date>{{ n.date|date:'d.m.Y' }}</date>
+        </button>
+    {% endfor %}
+ {% endblock %}
