@@ -1,0 +1,160 @@
+{% extends 'infocar.html' %}
+
+{% block title %}
+    {{c.name}}
+{% endblock %}
+
+{% block infocar %} 
+    {% for x in ic %}
+        <center>
+            <div class="bg_news">
+            <div class="caption-bottom"><img src = "{{c.image.url}}">
+                <div class="header_autoname">
+                <p>{{c.name}}</p>
+                </div>
+                <div class="header_table">Характеристики</div>
+                <div class="table-wrapper">
+                <table class="fl-table">
+                    <thead>
+                    <tr>
+                        <th>Параметры</th>
+                        {% if x.equipment1 %}<th>{{x.equipment1}}</th> {% endif %}
+                        {% if x.equipment2 %}<th>{{x.equipment2}}</th> {% endif %}
+                        {% if x.equipment3 %}<th>{{x.equipment3}}</th> {% endif %}
+                        {% if x.equipment4 %}<th>{{x.equipment4}}</th> {% endif %}
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>Тип привода</td>
+                        {% if x.drive_unit1 %}<td>{{x.drive_unit1}}</td> {% endif %}
+                        {% if x.drive_unit2 %}<td>{{x.drive_unit2}}</td> {% endif %}
+                        {% if x.drive_unit3 %}<td>{{x.drive_unit3}}</td> {% endif %}
+                        {% if x.drive_unit4 %}<td>{{x.drive_unit4}}</td> {% endif %}
+                    </tr>
+                    <tr>
+                        <td>Мощность, л.с.</td>
+                        {% if x.power1 %} <td>{{x.power1}}</td> {% endif %}
+                        {% if x.power2 %} <td>{{x.power2}}</td> {% endif %}
+                        {% if x.power3 %} <td>{{x.power3}}</td> {% endif %}
+                        {% if x.power4 %} <td>{{x.power4}}</td> {% endif %}
+                    </tr>
+                    <tr>
+                        <td>Тип кузова</td>
+                        {% if x.body1 %} <td>{{x.body1}}</td> {% endif %}
+                        {% if x.body2 %} <td>{{x.body2}}</td> {% endif %}
+                        {% if x.body3 %} <td>{{x.body3}}</td> {% endif %}
+                        {% if x.body4 %} <td>{{x.body4}}</td> {% endif %}                       
+                    </tr>
+                    <tr>
+                        <td>Время разгона 0-100 км/ч, с</td>
+                        {% if x.acceleration_time1 %} <td>{{x.acceleration_time1}}</td> {% endif %}
+                        {% if x.acceleration_time2 %} <td>{{x.acceleration_time2}}</td> {% endif %}
+                        {% if x.acceleration_time3 %} <td>{{x.acceleration_time3}}</td> {% endif %}
+                        {% if x.acceleration_time4 %} <td>{{x.acceleration_time4}}</td> {% endif %} 
+                    </tr>
+                    <tr>
+                        <td>Максимальная скорость, км/ч</td>
+                        {% if x.max_speed1 %} <td>{{x.max_speed1}}</td> {% endif %}
+                        {% if x.max_speed2 %} <td>{{x.max_speed2}}</td> {% endif %}
+                        {% if x.max_speed3 %} <td>{{x.max_speed3}}</td> {% endif %}
+                        {% if x.max_speed4 %} <td>{{x.max_speed4}}</td> {% endif %} 
+                    </tr>
+                    <tr>
+                        <td>Клиренс, мм</td>
+                        {% if x.clearance1 %} <td>{{x.clearance1}}</td> {% endif %}
+                        {% if x.clearance2 %} <td>{{x.clearance2}}</td> {% endif %}
+                        {% if x.clearance3 %} <td>{{x.clearance3}}</td> {% endif %}
+                        {% if x.clearance4 %} <td>{{x.clearance4}}</td> {% endif %} 
+                    </tr>
+                    <tr>
+                        <td>Габариты кузова (ДxШxВ)</td>
+                        {% if x.body_dimensions1 %} <td>{{x.body_dimensions1}}</td> {% endif %}
+                        {% if x.body_dimensions2 %} <td>{{x.body_dimensions2}}</td> {% endif %}
+                        {% if x.body_dimensions3 %} <td>{{x.body_dimensions3}}</td> {% endif %}
+                        {% if x.body_dimensions4 %} <td>{{x.body_dimensions4}}</td> {% endif %} 
+                    </tr>
+                    <tr>
+                        <td>Число мест</td>
+                        {% if x.nubmer_place1 %} <td>{{x.nubmer_place1}}</td> {% endif %}
+                        {% if x.nubmer_place2 %} <td>{{x.nubmer_place2}}</td> {% endif %}
+                        {% if x.nubmer_place3 %} <td>{{x.nubmer_place3}}</td> {% endif %}
+                        {% if x.nubmer_place4 %} <td>{{x.nubmer_place4}}</td> {% endif %} 
+                    </tr>
+                    <tr>
+                        <td>Масса, кг</td>
+                        {% if x.weight1 %} <td>{{x.weight1}}</td> {% endif %}
+                        {% if x.weight2 %} <td>{{x.weight2}}</td> {% endif %}
+                        {% if x.weight3 %} <td>{{x.weight3}}</td> {% endif %}
+                        {% if x.weight4 %} <td>{{x.weight4}}</td> {% endif %} 
+                    </tr>
+                    <tr>
+                        <td>Запас хода, км</td>
+                        {% if x.power_reserve1 %} <td>{{x.power_reserve1}}</td> {% endif %}
+                        {% if x.power_reserve2 %} <td>{{x.power_reserve2}}</td> {% endif %}
+                        {% if x.power_reserve3 %} <td>{{x.power_reserve3}}</td> {% endif %}
+                        {% if x.power_reserve4 %} <td>{{x.power_reserve4}}</td> {% endif %} 
+                    </tr>
+                    <tr>
+                        <td>Крутящий момент, Нм</td>
+                        {% if x.torque1 %} <td>{{x.torque1}}</td> {% endif %}
+                        {% if x.torque2 %} <td>{{x.torque2}}</td> {% endif %}
+                        {% if x.torque3 %} <td>{{x.torque3}}</td> {% endif %}
+                        {% if x.torque4 %} <td>{{x.torque4}}</td> {% endif %} 
+                    </tr>
+                    <tr>
+                        <td>Рулевое управление</td>
+                        {% if x.steering1 %} <td>{{x.steering1}}</td> {% endif %}
+                        {% if x.steering2 %} <td>{{x.steering2}}</td> {% endif %}
+                        {% if x.steering3 %} <td>{{x.steering3}}</td> {% endif %}
+                        {% if x.steering4 %} <td>{{x.steering4}}</td> {% endif %} 
+                    </tr>
+                    <tr>
+                        <td>Электронные помощники</td>
+                        {% if x.electronic_assistants1 %} <td>{{x.electronic_assistants1}}</td> {% endif %}
+                        {% if x.electronic_assistants2 %} <td>{{x.electronic_assistants2}}</td> {% endif %}
+                        {% if x.electronic_assistants3 %} <td>{{x.electronic_assistants3}}</td> {% endif %}
+                        {% if x.electronic_assistants4 %} <td>{{x.electronic_assistants4}}</td> {% endif %} 
+                    </tr>
+                    <tr>
+                        <td>Объём багажника, л</td>
+                        {% if x.trunk_volume1 %} <td>{{x.trunk_volume1}}</td> {% endif %}
+                        {% if x.trunk_volume2 %} <td>{{x.trunk_volume2}}</td> {% endif %}
+                        {% if x.trunk_volume3 %} <td>{{x.trunk_volume3}}</td> {% endif %}
+                        {% if x.trunk_volume4 %} <td>{{x.trunk_volume4}}</td> {% endif %} 
+                    </tr>
+                    <tr>
+                        <td>Трансмиссия</td>
+                        {% if x.transmission1 %} <td>{{x.transmission1}}</td> {% endif %}
+                        {% if x.transmission2 %} <td>{{x.transmission2}}</td> {% endif %}
+                        {% if x.transmission3 %} <td>{{x.transmission3}}</td> {% endif %}
+                        {% if x.transmission4 %} <td>{{x.transmission4}}</td> {% endif %} 
+                    </tr>
+                    <tr>
+                        <td>Расположение руля</td>
+                        {% if x.steering_position1 %} <td>{{x.steering_position1}}</td> {% endif %}
+                        {% if x.steering_position2 %} <td>{{x.steering_position2}}</td> {% endif %}
+                        {% if x.steering_position3 %} <td>{{x.steering_position3}}</td> {% endif %}
+                        {% if x.steering_position4 %} <td>{{x.steering_position4}}</td> {% endif %} 
+                    <tr>
+                        <td>Класс</td>
+                        {% if x.class_car1 %} <td>{{x.class_car1}}</td> {% endif %}
+                        {% if x.class_car2 %} <td>{{x.class_car2}}</td> {% endif %}
+                        {% if x.class_car3 %} <td>{{x.class_car3}}</td> {% endif %}
+                        {% if x.class_car4 %} <td>{{x.class_car4}}</td> {% endif %} 
+                    </tr>
+                    <tr>
+                        <td>Автопилот</td>
+                        {% if x.autopilot1 %} <td>{{x.autopilot1}}</td> {% endif %}
+                        {% if x.autopilot2 %} <td>{{x.autopilot2}}</td> {% endif %}
+                        {% if x.autopilot3 %} <td>{{x.autopilot3}}</td> {% endif %}
+                        {% if x.autopilot4 %} <td>{{x.autopilot4}}</td> {% endif %} 
+                    </tr>
+                    <tbody>
+                </table>
+                </div>
+                <div class="fot"></div>
+            </div>
+        </center>
+    {% endfor %}
+{% endblock %}
