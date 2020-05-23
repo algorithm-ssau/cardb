@@ -1,0 +1,18 @@
+{% extends 'infonews.html' %}
+
+{% block title %}
+    {{news.header}}
+{% endblock %}
+
+{% block infonews %}
+            <div class="bg_news">
+            <div class="header_news">{{news.header}}</div>
+            <div class="news_date">{{ news.date|date:'d.m.Y' }}</div>
+            <div class="caption-bottom"><img src = "{{news.image.url}}"></div>
+            <div class="info_news">
+                {{news.info|safe}}        
+                
+            </div>
+            <div class="fot"></div>
+            </div>
+{% endblock %}
