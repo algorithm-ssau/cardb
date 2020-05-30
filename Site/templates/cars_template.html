@@ -1,0 +1,43 @@
+{% extends 'cars.html' %}
+{% load static %}
+
+{% block title %}
+    {% if ac %}
+        {% if check == 0 %}
+            Поиск - {{ sq }}
+        {% endif %}
+        {% if check == 1 %}
+            {{un}}
+        {% endif %}
+    {% else %}
+        Ничего не найдено
+    {% endif %}
+{% endblock %}
+
+{% block cars %}
+    {% if ac %}
+        {% for x in ac %}
+            <div class="anybut">
+                <button class="image-top" onclick="location.href='{% url 'ecardb:cars' x.url_name%}'"><img src = "{{x.image.url}}">
+                <div class="header_autoname_top">
+                    <p>{{x.name}}</p>
+                </div>
+                </button>
+            </div>
+        {% endfor %}
+    {% else %}
+        <div class="style_nf">
+            <p>
+                {{nf}} <div class="style_smile"><img src="{% static 'image/sad_smile.png' %}"></div>
+            </p>
+        </div> 
+    {% endif %}
+{% endblock %}
+
+{% block footer %}
+    {% if ac|length < 6 %}
+        <div class="footer">
+        <p>&copy; Все права защищены</p>
+        </div>
+    {% endif %}
+{% endblock %}
